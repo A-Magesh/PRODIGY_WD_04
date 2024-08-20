@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="Container"> 
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Full Stack Web Developer</p>
+            <h1>Hi,I'am <span>Magesh</span></h1>
+
+        </div>
+    </div>
+
+</div>
+<!-----------------a--------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p>I am a dedicated FUll Stack Developer with a solid background on Computer Science Engineering.
+                   Currently pursuing a BE-Computer Science Engineering with aCGPA of8.14.To utlize my knowledge
+                   and skills,utilize given opportunity effectively for professional growth and to contribute in
+                   thebest possible way for the betterof the organizaton and self.</p>
+
+                   <div class="tad-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">SKills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('project ')">project</p>
+                   </div>
+                   <div class="tab-contents active-tab" id="skills">
+                    <ul> 
+                        <li><span>Full Stack Development</span><br>front end development<br>back end Development</li>
+                        <li><span>Java</span><br>Java programming</li>
+                    </ul>
+                   </div>
+                   <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022-2026</span><br>BE-Computer Science Engineering at Mahendra Institutions<br>CGPA:8.14</li>
+                        
+                    </ul>
+                   </div>
+                   <div class="tab-contents" id="project">
+                    <ul>
+                        <li><span>Projects</span><br>Calculator Application<br>Chatbot Application</li>
+                         
+                    </ul>
+                   </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------services------------>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title"> My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Full Stack Web Development</h2>
+                <p>Full Stack web development involves building both the front-end (user interface) and
+                    back-end(server,database) of web Applications.Developers use technologies like HTML,CSS,
+                    Javascript for the front-end,and tools like Node.js,Python,or SQL for the back-end.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!------------portfolio ------>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-4.jpeg">
+                <div class="layer">
+                    <h3>Searching Data</h3>
+                    <p>Searching data on technology involves gathering information from sources like industry reports,tech blogs,
+                        and academic journals.key steps including defining your focus, identifying sources,and using effective
+                        search tools. 
+                    </p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.jpeg">
+                <div class="layer">
+                    <h3>Studing</h3>
+                    <p>Studing involves reviewing and understanding material to learn or master a subject.it includes reading
+                        ,practing,and recalling information to prepare for exams or gain knowledge.
+                    </p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.jpeg">
+                <div class="layer">
+                    <h3>Coding</h3>
+                    <p>Coding is the process of writing instructions in a programming languages to create software,app,or 
+                        wedsites.It involves problem-solving,logic,and creativity to build function programs.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+
+<!-------contact---------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>amageshrabbaiah@gmail.com</p>
+                <p>8778452990</p>
+                <a href="images/my resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="Email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Massege"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg">Message sent successsfully</span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+    <p>Copyright@ Additional information</p>
+    </div>
+</div>
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+    
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzVhUGOOn2wdMSy-ZrEOgN3oRhlMS72FFVqP3WD2EsM986Stgg4aHNKBLuheHPe1SkOCw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+            msg.innerHTML="Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+
+
+    })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>    
+
+    
+</body>
+</html>
